@@ -9,11 +9,17 @@ body
 
 table
 {
-    border: 2px solid rgb(233, 149, 188);
+    border: 2px solid rgb(3, 4, 61);
     width: 75%;
     border-radius: 10px;
+    border-left-width: 10px;
+    border-top-width: 10px;
 }
 
+html
+{
+    font-family: 'Times New Roman', Times, serif;
+}
 /*td
 {
     border:1px solid black;
