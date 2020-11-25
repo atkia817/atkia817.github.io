@@ -9,11 +9,12 @@ body
 
 table
 {
-    border: 1px solid black;
-    width: 80%;
+    border: 2px solid rgb(233, 149, 188);
+    width: 75%;
+    border-radius: 10px;
 }
 
-td
+/*td
 {
     border:1px solid black;
-}
+}*/
