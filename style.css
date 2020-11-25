@@ -1,0 +1,19 @@
+body
+{
+    background-image:url("images/background.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table
+{
+    border: 1px solid black;
+    width: 80%;
+}
+
+
+{
+    border:1px solid black;
+}
