@@ -1,3 +1,8 @@
+html
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body
 {
     background-image:url("https://atkia817.github.io/images/background.jpg");
@@ -7,7 +12,13 @@ body
     background-size: cover;
 }
 
-.table_
+.tablepropic
+{
+    border: 2px solid rgb(8, 9, 61);
+    border-radius: 10px;
+}
+
+.tablemain
 {
     border: 2px solid rgb(8, 9, 61);
     width: 80%;
@@ -17,11 +28,7 @@ body
     background-color: rgb(223, 130, 168);
 }
 
-.tablepro
-{
-    border: 2px solid rgb(8, 9, 61);
-    border-radius: 10px;
-}
+
 
 .t2
 {
@@ -35,7 +42,3 @@ body
     width: 50;
 }
 
-html
-{
-    font-family: 'Times New Roman', Times, serif;
-}
