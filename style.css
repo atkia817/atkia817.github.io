@@ -1,6 +1,7 @@
 html
 {
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
 body
@@ -12,13 +13,29 @@ body
     background-size: cover;
 }
 
-.tablepropic
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    color: aquamarine;
+}
+
+a:visited
+{
+    color: black;
+}
+
+table.propic
 {
     border: 2px solid rgb(8, 9, 61);
     border-radius: 10px;
 }
 
-.tablemain
+table.main
 {
     border: 2px solid rgb(8, 9, 61);
     width: 80%;
