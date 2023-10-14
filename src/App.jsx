@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faGraduationCap, faMicroscope } from "@fortawesome/free-solid-svg-icons";
+import { faAward, faCoffee, faGraduationCap, faLaptopCode, faMicroscope } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const data = {
@@ -39,12 +39,15 @@ function App() {
     research: [
       {
         label: "Graduate (MSc) Thesis Research",
-        content: "Investigating the influence of cigarette smoking on neutrophilic function and inflammation. (ongoing)",
+        content:
+          "Modifiable risk factors linked to the development of rheumatoid arthritis: evidence, immunological mechanisms and prevention",
+        url: "https://www.frontiersin.org/articles/10.3389/fimmu.2023.1221125/full",
       },
       {
         label: "Undergraduate Thesis Research",
         content:
-          "A Study on the Frequency of HBBP1 rs2071348 Polymorphism and its Association with HbF Level and Disease Severity among Bangladeshi HbE/β - Thalassemia Patients.",
+          "A Study on the Frequency of HBBP1 rs2071348 Polymorphism and its Association with HbF Level and Disease Severity among Bangladeshi HbE/β - Thalassemia Patients",
+        url: "#",
       },
     ],
     lab: [
@@ -245,6 +248,24 @@ function App() {
         <img className="main_image_img" src="/profile.jpg" alt="" />
       </div>
       <div className="main_bio">{data.bio}</div>
+
+      <div className="main_research">
+        <span className="main_section_header">
+          <span>Academic Research</span>
+          <FontAwesomeIcon icon={faMicroscope} />
+        </span>
+        {data.research.map(({ label, content, url }, i) => {
+          return (
+            <div key={i} className="main_research_item">
+              <span className="main_research_item_number">{i + 1}. </span>
+              {/* <span className="main_research_item_label">{label}</span> */}
+              <a href={url} className="main_research_item_content">
+                {content}
+              </a>
+            </div>
+          );
+        })}
+      </div>
       <div className="main_education">
         <span className="main_section_header">
           <span>Education</span>
@@ -262,17 +283,32 @@ function App() {
           );
         })}
       </div>
-      <div className="main_research">
+      <div className="main_awards">
         <span className="main_section_header">
-          <span>Academic Research</span>
-          <FontAwesomeIcon icon={faMicroscope} />
+          <span>Awards</span>
+          <FontAwesomeIcon icon={faAward} />
         </span>
-        {data.research.map(({ label, content }, i) => {
+        {data.awards.map(({ label, content }, i) => {
           return (
-            <div key={i} className="main_research_item">
-              <span className="main_research_item_number">{i + 1}. </span>
-              <span className="main_research_item_label">{label}</span>
-              <span className="main_research_item_content">{content}</span>
+            <div key={i} className="main_awards_item">
+              <span className="main_awards_item_number">&#8226;</span>
+              <span className="main_awards_item_label">{label}</span>
+              <span className="main_awards_item_content">{content}</span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="main_lab">
+        <span className="main_section_header">
+          <span>Lab Skills</span>
+          <FontAwesomeIcon icon={faLaptopCode} />
+        </span>
+        {data.lab.map(({ label, content }, i) => {
+          return (
+            <div key={i} className="main_lab_item">
+              <span className="main_lab_item_number">&#8226; </span>
+              <span className="main_lab_item_label">{label}</span>
+              <span className="main_lab_item_content">{content}</span>
             </div>
           );
         })}

@@ -5,7 +5,7 @@ body {
 }
 
 .main {
-  font-size: 17px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   // font-weight: lighter;
   padding: 0rem 1rem;
@@ -42,14 +42,39 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
   }
+  &_research {
+    // padding: 0 0.5rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    &_item {
+      display: grid;
+      grid-template-columns: 5% 95%;
+      &_number {
+        grid-row: span 2;
+        font-weight: bold;
+      }
+      &_label {
+        font-weight: bold;
+      }
+      &_content {
+        text-decoration: none;
+        color: #1695a3;
+        transition: color 0.5s;
+        &:hover {
+          color: rgb(74, 146, 233);
+        }
+      }
+    }
+  }
   &_education {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
     // grid-column: span 2;
     &_item {
       border-bottom: 1px solid black;
-      padding: 0.25rem 0;
+      padding: 0.5rem 0;
       display: grid;
       grid-template-columns: 50% 50%;
       &_institute {
@@ -61,16 +86,39 @@ body {
       }
     }
   }
-  &_research {
+  &_awards {
+    padding: 0 1rem;
+    text-align: justify;
     &_item {
-      display: grid;
-      grid-template-columns: 5% 95%;
       &_number {
+        display: flex;
+        justify-content: center;
         grid-row: span 2;
+        font-weight: bold;
       }
       &_label {
         font-weight: bold;
       }
+      display: grid;
+      grid-template-columns: 5% 95%;
+    }
+  }
+  &_lab {
+    padding: 0 0.5rem;
+    grid-column: span 2;
+    text-align: justify;
+    &_item {
+      &_number {
+        grid-row: span 2;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+      }
+      &_label {
+        font-weight: bold;
+      }
+      display: grid;
+      grid-template-columns: 5% 95%;
     }
   }
 }
@@ -88,6 +136,9 @@ body {
   .main {
     grid-template-columns: 100%;
     width: 90%;
+    &_title {
+      text-align: center;
+    }
   }
   .main_education_item {
     grid-template-columns: 100%;
