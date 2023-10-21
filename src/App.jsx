@@ -46,7 +46,7 @@ function App() {
       {
         label: "Undergraduate Thesis Research",
         content:
-          "A Study on the Frequency of HBBP1 rs2071348 Polymorphism and its Association with HbF Level and Disease Severity among Bangladeshi HbE/β - Thalassemia Patients",
+          "A Study on the Frequency of <i>HBBP1</i> rs2071348 Polymorphism and its Association with HbF Level and Disease Severity among Bangladeshi HbE/β - Thalassemia Patients",
         url: "#",
       },
     ],
@@ -110,7 +110,7 @@ function App() {
       {
         label: "Pro-Vice Chancellor’s Certificate for Residential Semester",
         content:
-          "Awarded for academic excellence, high standard of discipline and devotion to duties during Residential Semester 44 (Brac University)",
+          "For academic excellent standard of discipline to duties during Residential Semester 44 (Brac University)",
       },
       {
         label: "Academic Performance Based Scholarships",
@@ -258,10 +258,7 @@ function App() {
           return (
             <div key={i} className="main_research_item">
               <span className="main_research_item_number">{i + 1}. </span>
-              {/* <span className="main_research_item_label">{label}</span> */}
-              <a href={url} className="main_research_item_content">
-                {content}
-              </a>
+              <a href={url} className="main_research_item_content" dangerouslySetInnerHTML={{ __html: content }} />
             </div>
           );
         })}
@@ -306,7 +303,7 @@ function App() {
         {data.lab.map(({ label, content }, i) => {
           return (
             <div key={i} className="main_lab_item">
-              <span className="main_lab_item_number">&#8226; </span>
+              {/* <span className="main_lab_item_number">&#8226; </span> */}
               <span className="main_lab_item_label">{label}</span>
               <span className="main_lab_item_content">{content}</span>
             </div>
