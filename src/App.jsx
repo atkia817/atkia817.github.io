@@ -17,8 +17,9 @@ function App() {
 
   return (
     <>
-      <nav>
+      <nav className="main_navbar">
         <Link
+          className="main_navbar_link"
           activeClass="active"
           to="test1"
           spy={true}
@@ -29,9 +30,32 @@ function App() {
         >
           Academic Research
         </Link>
-        <button>Education</button>
-        <button>Awards</button>
         <Link
+          className="main_navbar_link"
+          activeClass="active"
+          to="education"
+          spy={true}
+          smooth={true}
+          offset={-85}
+          duration={500}
+          onSetActive={handleSetActive}
+        >
+          Education
+        </Link>
+        <Link
+          className="main_navbar_link"
+          activeClass="active"
+          to="awards"
+          spy={true}
+          smooth={true}
+          offset={-85}
+          duration={500}
+          onSetActive={handleSetActive}
+        >
+          Awards
+        </Link>
+        <Link
+          className="main_navbar_link"
           activeClass="active"
           to="labskills"
           spy={true}
@@ -64,7 +88,7 @@ function App() {
             );
           })}
         </div>
-        <div className="main_education">
+        <Element name="education" className="main_education">
           <span className="main_section_header">
             <span>Education</span>
             <FontAwesomeIcon icon={faGraduationCap} />
@@ -80,8 +104,8 @@ function App() {
               </div>
             );
           })}
-        </div>
-        <div className="main_awards">
+        </Element>
+        <Element name="awards" className="main_awards">
           <span className="main_section_header">
             <span>Awards</span>
             <FontAwesomeIcon icon={faAward} />
@@ -95,7 +119,7 @@ function App() {
               </div>
             );
           })}
-        </div>
+        </Element>
         <div className="main_lab">
           <Element className="main_section_header" name="labskills" >
             <span className="main_section_header_title">Lab Skills</span>
